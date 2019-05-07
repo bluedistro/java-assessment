@@ -18,7 +18,6 @@ def read_results():
 @app.route("/java/<int:id_number>")
 def view_results(id_number):
     data = read_results()
-    print(data)
     try:
         # cast id numbers to int
         data["ID"] = data["ID"].astype(int)
