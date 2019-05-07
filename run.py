@@ -37,7 +37,6 @@ def view_results_name():
         abort(404)
     else:
         try:
-            print(name)
             data['ID'] = data['ID'].astype(int)
             name_to_lower = data['Name'].str.lower()
             location = np.where(name_to_lower.str.contains(name.lower()))[0][0]
